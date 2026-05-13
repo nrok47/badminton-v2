@@ -1694,6 +1694,7 @@ function updateMatchPreview(){
 function recordMatch(){
   if(!isAdmin()){ toast('เฉพาะ Admin เท่านั้น','🚫'); return; }
   if(!isSubscribed() && freeMatchesLeft()<=0){ openModal('modal-upgrade'); return; }
+  const w1v=document.getElementById('w1').value;
   const l1v=document.getElementById('l1').value;
   if(!w1v||!l1v){ toast('กรุณาเลือกผู้เล่นอย่างน้อยฝั่งละ 1 คน','⚠️'); return; }
   const winners=[parseInt(w1v)];
